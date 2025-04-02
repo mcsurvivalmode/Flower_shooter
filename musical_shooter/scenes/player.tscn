@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://crmi0dyeil037"]
+
+[ext_resource type="Script" path="res://scenes/hose_movement.gd" id="1_4geju"]
+[ext_resource type="Texture2D" uid="uid://bp6iqh8wc8uqe" path="res://place_holders/hose.png" id="1_63v6f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmki5"]
+size = Vector2(48, 657)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(0, 63)
+slide_on_ceiling = false
+floor_snap_length = 16.5
+script = ExtResource("1_4geju")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -4)
+shape = SubResource("RectangleShape2D_cmki5")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(38, 69)
+scale = Vector2(1.36426, 1.56738)
+texture = ExtResource("1_63v6f")
