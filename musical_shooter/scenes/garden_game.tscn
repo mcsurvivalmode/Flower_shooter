@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bq2lcr2hcvim6"]
+[gd_scene load_steps=9 format=3 uid="uid://bg0f350au30km"]
 
-[ext_resource type="Script" path="res://scripts/my shooter.gd" id="1_vm1ku"]
-[ext_resource type="Script" path="res://scripts/flower_spawner.gd" id="2_rxwhn"]
-[ext_resource type="PackedScene" uid="uid://crmi0dyeil037" path="res://scenes/player.tscn" id="4_jgb88"]
-[ext_resource type="PackedScene" uid="uid://tc15etche3ta" path="res://scenes/bud_lily.tscn" id="4_uj42u"]
+[ext_resource type="Script" path="res://scripts/my shooter.gd" id="1_yv2sj"]
+[ext_resource type="PackedScene" uid="uid://crmi0dyeil037" path="res://scenes/player.tscn" id="2_uxrxa"]
+[ext_resource type="Script" path="res://scripts/flower_spawner.gd" id="3_cgi6h"]
+[ext_resource type="PackedScene" uid="uid://tc15etche3ta" path="res://scenes/bud_lily.tscn" id="4_1kca7"]
 
 [sub_resource type="Theme" id="Theme_1pe4y"]
 
@@ -14,7 +14,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72exp"]
 
 [node name="My shooter game" type="Node2D"]
-script = ExtResource("1_vm1ku")
+script = ExtResource("1_yv2sj")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -233.0
@@ -38,7 +38,7 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 45
 text = "Grow Your Garden!"
 
-[node name="Player" parent="." instance=ExtResource("4_jgb88")]
+[node name="Player" parent="." instance=ExtResource("2_uxrxa")]
 position = Vector2(953, -227)
 scale = Vector2(1.25621, 1.91668)
 collision_mask = 8
@@ -47,12 +47,12 @@ collision_mask = 8
 position = Vector2(5, 366)
 
 [node name="flower_spawner" type="Marker2D" parent="."]
-position = Vector2(804, 728)
-script = ExtResource("2_rxwhn")
-flower_scene = ExtResource("4_uj42u")
-radius = 300.0
-count = 5
-rate = 600
+position = Vector2(880, 914)
+script = ExtResource("3_cgi6h")
+flower_scene = ExtResource("4_1kca7")
+radius = 500.0
+count = 8
+rate = 1000
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(885, 1262)

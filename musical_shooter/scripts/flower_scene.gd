@@ -24,7 +24,7 @@ func _ready() -> void:
 	if ! Engine.is_editor_hint():
 		scale = Vector2.ZERO
 		var tween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_IN_OUT)
-		tween.tween_property(self, "scale", Vector2.ONE, 0.5)
+		tween.tween_property(self, "scale", Vector2.ONE, 0.1)
 		tween.finished.connect(movement)
 		# vary the pitch
 	
@@ -43,7 +43,7 @@ func randomise_timer():
 	 
 
 
-func _on_hitbox_area_entered(area: Area2D) -> void:
+func _on_hitbox_area_entered(area: Area2D) -> void: #plays animation when flower bud is hit 
 	print("HITHITHIT")
 	#spawn flower 
 	var lily_flower = lily_bloom_prefab.instantiate()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm8h2vebrupcm"
-path="res://.godot/imported/bud_lily.png-29c2bf3fb1416df9d3866c74893d899d.ctex"
+uid="uid://cl7wv2vx5v4rm"
+path="res://.godot/imported/lily_6.png-2ba3b8e836c99a296bdc7b5e7c026e4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://place_holders/bud_lily.png"
-dest_files=["res://.godot/imported/bud_lily.png-29c2bf3fb1416df9d3866c74893d899d.ctex"]
+source_file="res://lily_animation/lily_6.png"
+dest_files=["res://.godot/imported/lily_6.png-2ba3b8e836c99a296bdc7b5e7c026e4f.ctex"]
 
 [params]
 
