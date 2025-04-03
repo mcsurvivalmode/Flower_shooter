@@ -51,9 +51,9 @@ position = Vector2(804, 728)
 scale = Vector2(1, 1)
 script = ExtResource("2_rxwhn")
 flower_scene = ExtResource("3_uer87")
-radius = 300.0
-count = 4
-rate = 100
+radius = 600.0
+count = 6
+rate = 600
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(885, 1262)

@@ -8,9 +8,10 @@ extends CharacterBody2D
 
 func movement():
 	var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_EXPO)	
-	tween.tween_property(self, "position", position + Vector2.RIGHT * 300, 5)
-	tween.tween_property(self, "rotation", PI, 4)
-	tween.tween_property(self, "position", position + Vector2.LEFT * 300, 5)
+	tween.tween_property(self, "position", position + Vector2.RIGHT * 700, 5)
+	#tween.tween_property(self, "rotation", PI, 4)
+	tween.tween_property(self, "position", position + Vector2.LEFT * 700, 5)
+	tween.tween_property(self, "position", position + Vector2.RIGHT * 700, 5)
 	#tween.tween_property(self, "position", position + Vector2.UP * 400, 5)
 	#tween.tween_property(self, "position", position + Vector2.DOWN * 400, 5)
 	tween.finished.connect(movement)
