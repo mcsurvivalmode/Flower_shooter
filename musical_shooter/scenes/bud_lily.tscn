@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://un7c4vjdbrpm"]
+[gd_scene load_steps=5 format=3 uid="uid://tc15etche3ta"]
 
-[ext_resource type="Script" path="res://scripts/flower_scene.gd" id="1_fy63p"]
-[ext_resource type="Texture2D" uid="uid://bm8h2vebrupcm" path="res://place_holders/bud_lily.png" id="2_1ev3f"]
+[ext_resource type="Script" path="res://scripts/flower_scene.gd" id="1_bm7cm"]
+[ext_resource type="Texture2D" uid="uid://bm8h2vebrupcm" path="res://place_holders/bud_lily.png" id="2_5skx0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ks2la"]
 
@@ -14,7 +14,7 @@ position = Vector2(552, 296)
 scale = Vector2(-0.058059, 0.0345552)
 collision_layer = 2
 collision_mask = 4
-script = ExtResource("1_fy63p")
+script = ExtResource("1_bm7cm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, -1.5)
@@ -28,7 +28,7 @@ wait_time = 6.823
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-4.00006, -2)
 scale = Vector2(0.955801, 1.21834)
-texture = ExtResource("2_1ev3f")
+texture = ExtResource("2_5skx0")
 
 [node name="hitbox" type="Area2D" parent="."]
 

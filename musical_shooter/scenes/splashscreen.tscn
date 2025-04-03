@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnqwwgwqgl1pc"]
+
+[ext_resource type="Script" path="res://scenes/splashscreen.gd" id="1_umk33"]
+
+[node name="Splashscreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_umk33")
+
+[node name="play_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 204.0
+offset_right = 370.0
+offset_bottom = 235.0
+text = "Play"
+
+[node name="quit_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 287.0
+offset_right = 374.0
+offset_bottom = 318.0
+text = "Quit
+"
+
+[connection signal="pressed" from="play_button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]

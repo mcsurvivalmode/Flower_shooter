@@ -48,11 +48,10 @@ position = Vector2(5, 366)
 
 [node name="flower_spawner" type="Marker2D" parent="."]
 position = Vector2(804, 728)
-scale = Vector2(1, 1)
 script = ExtResource("2_rxwhn")
 flower_scene = ExtResource("3_uer87")
-radius = 600.0
-count = 6
+radius = 300.0
+count = 5
 rate = 600
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -70,6 +69,7 @@ scale = Vector2(109.84, 4.24)
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(0, -19.1038)
 shape = SubResource("RectangleShape2D_osva0")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
