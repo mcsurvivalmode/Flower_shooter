@@ -31,21 +31,22 @@ theme_override_font_sizes/font_size = 45
 text = "Grow Your Garden!"
 
 [node name="flower_spawner" type="Marker2D" parent="."]
-position = Vector2(-2250, 333)
+position = Vector2(742, 362)
 script = ExtResource("2_rxwhn")
 flower_scene = ExtResource("3_uer87")
-radius = 500.0
-count = 5
-rate = 1
+radius = 300.0
+count = 4
+rate = 100
 
 [node name="Player" parent="." instance=ExtResource("4_jgb88")]
 position = Vector2(549, -199)
+scale = Vector2(0.719999, 1)
 
 [node name="Marker2D2" type="Marker2D" parent="Player"]
 position = Vector2(5, 366)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(571, 701)
+position = Vector2(557, 1191)
 scale = Vector2(65.4, 4.24)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -60,6 +61,7 @@ shape = SubResource("RectangleShape2D_osva0")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(1165, -24)
+scale = Vector2(1, 1.72)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2(10, 100)
@@ -68,7 +70,7 @@ shape = SubResource("RectangleShape2D_v7yxb")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(-43, 280)
-scale = Vector2(4.2, 41.16)
+scale = Vector2(4.2, 87.84)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(0, -6.24393)

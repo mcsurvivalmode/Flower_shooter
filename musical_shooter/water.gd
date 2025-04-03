@@ -3,7 +3,7 @@ extends CharacterBody2D
 var speed = 400
 
 func _process(delta):
-  move_local_x(speed * delta)
+  move_local_y(speed * delta)
 
 
 

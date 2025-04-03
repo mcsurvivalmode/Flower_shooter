@@ -7,12 +7,12 @@ extends CharacterBody2D
 
 
 func movement():
-	var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_EXPO)
-	tween.tween_property(self, "rotation", PI, 2)		
-	tween.tween_property(self, "position", position + Vector2.RIGHT * 500, 20)
-	tween.tween_property(self, "position", position + Vector2.LEFT * 400, 20)
-	tween.tween_property(self, "position", position + Vector2.UP * 400, 20)
-	tween.tween_property(self, "position", position + Vector2.DOWN * 400, 2)
+	var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_EXPO)	
+	tween.tween_property(self, "position", position + Vector2.RIGHT * 300, 5)
+	tween.tween_property(self, "rotation", PI, 4)
+	tween.tween_property(self, "position", position + Vector2.LEFT * 300, 5)
+	#tween.tween_property(self, "position", position + Vector2.UP * 400, 5)
+	#tween.tween_property(self, "position", position + Vector2.DOWN * 400, 5)
 	tween.finished.connect(movement)
 		
 	pass
@@ -22,7 +22,7 @@ func _ready() -> void:
 	if ! Engine.is_editor_hint():
 		scale = Vector2.ZERO
 		var tween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_IN_OUT)
-		tween.tween_property(self, "scale", Vector2.ONE, 1)
+		tween.tween_property(self, "scale", Vector2.ONE, 0.5)
 		tween.finished.connect(movement)
 		# vary the pitch
 	
