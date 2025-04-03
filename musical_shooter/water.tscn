@@ -6,6 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_66chk"]
 
 [node name="water" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 2
 motion_mode = 1
 floor_snap_length = 22.0
 script = ExtResource("1_juc8s")

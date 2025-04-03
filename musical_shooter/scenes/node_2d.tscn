@@ -16,6 +16,14 @@
 [node name="My shooter game" type="Node2D"]
 script = ExtResource("1_vm1ku")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -233.0
+offset_top = -1113.0
+offset_right = -193.0
+offset_bottom = -1073.0
+scale = Vector2(54.9189, 62.386)
+color = Color(0.449623, 0.665701, 0.373682, 1)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="title" type="Label" parent="CanvasLayer"]
@@ -30,38 +38,44 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 45
 text = "Grow Your Garden!"
 
+[node name="Player" parent="." instance=ExtResource("4_jgb88")]
+position = Vector2(953, -227)
+scale = Vector2(1.25621, 1.91668)
+collision_mask = 8
+
+[node name="Marker2D2" type="Marker2D" parent="Player"]
+position = Vector2(5, 366)
+
 [node name="flower_spawner" type="Marker2D" parent="."]
-position = Vector2(742, 362)
+position = Vector2(804, 728)
+scale = Vector2(1, 1)
 script = ExtResource("2_rxwhn")
 flower_scene = ExtResource("3_uer87")
 radius = 300.0
 count = 4
 rate = 100
 
-[node name="Player" parent="." instance=ExtResource("4_jgb88")]
-position = Vector2(549, -199)
-scale = Vector2(0.719999, 1)
-
-[node name="Marker2D2" type="Marker2D" parent="Player"]
-position = Vector2(5, 366)
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(557, 1191)
-scale = Vector2(65.4, 4.24)
+position = Vector2(885, 1262)
+scale = Vector2(106.28, 4.24)
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -23.5849)
 shape = SubResource("RectangleShape2D_osva0")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
-position = Vector2(571, -588)
-scale = Vector2(65.4, 4.24)
+position = Vector2(1018, -1059)
+scale = Vector2(109.84, 4.24)
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
 shape = SubResource("RectangleShape2D_osva0")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(1165, -24)
-scale = Vector2(1, 1.72)
+position = Vector2(1912, -24)
+scale = Vector2(1, 6.76)
+collision_layer = 8
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2(10, 100)
@@ -71,6 +85,7 @@ shape = SubResource("RectangleShape2D_v7yxb")
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(-43, 280)
 scale = Vector2(4.2, 87.84)
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(0, -6.24393)
