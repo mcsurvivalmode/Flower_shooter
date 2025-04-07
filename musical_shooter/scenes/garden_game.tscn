@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bg0f350au30km"]
+[gd_scene load_steps=11 format=3 uid="uid://bg0f350au30km"]
 
 [ext_resource type="Script" path="res://scripts/my shooter.gd" id="1_yv2sj"]
 [ext_resource type="PackedScene" uid="uid://crmi0dyeil037" path="res://scenes/player.tscn" id="2_uxrxa"]
 [ext_resource type="Script" path="res://scripts/flower_spawner.gd" id="3_cgi6h"]
 [ext_resource type="PackedScene" uid="uid://tc15etche3ta" path="res://scenes/bud_lily.tscn" id="4_1kca7"]
+[ext_resource type="Script" path="res://scenes/flower_spawner_2.gd" id="5_dwhpf"]
+[ext_resource type="PackedScene" uid="uid://c4q1nn51rphr5" path="res://bud_lily_2.tscn" id="6_jcbot"]
 
 [sub_resource type="Theme" id="Theme_1pe4y"]
 
@@ -47,12 +49,17 @@ collision_mask = 8
 position = Vector2(5, 366)
 
 [node name="flower_spawner" type="Marker2D" parent="."]
-position = Vector2(880, 914)
+position = Vector2(1441, 700)
 script = ExtResource("3_cgi6h")
 flower_scene = ExtResource("4_1kca7")
 radius = 500.0
 count = 8
 rate = 1000
+
+[node name="flower_spawner2" type="Marker2D" parent="."]
+position = Vector2(366, 567)
+script = ExtResource("5_dwhpf")
+flower_scene_2 = ExtResource("6_jcbot")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(885, 1262)

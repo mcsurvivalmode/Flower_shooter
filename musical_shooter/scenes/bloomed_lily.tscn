@@ -30,7 +30,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_ra1d2")
 }],
-"loop": true,
+"loop": false,
 "name": &"lily_bloom",
 "speed": 6.0
 }]
