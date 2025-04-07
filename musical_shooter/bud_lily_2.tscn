@@ -8,6 +8,8 @@ radius = 24.3106
 height = 48.6212
 
 [node name="bud_lily_2" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 4
 script = ExtResource("1_3qbox")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -26,10 +28,14 @@ shape = SubResource("CapsuleShape2D_svvj6")
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(273, 103)
 
-[node name="hitbox" type="Area2D" parent="."]
+[node name="hitbox_2" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="hitbox"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="hitbox_2"]
 position = Vector2(272.5, 104)
 rotation = 2.63346
 scale = Vector2(1, 1.8)
 shape = SubResource("CapsuleShape2D_svvj6")
+
+[connection signal="area_entered" from="hitbox_2" to="." method="_on_hitbox_2_area_entered"]
