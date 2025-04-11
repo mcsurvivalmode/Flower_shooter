@@ -47,6 +47,7 @@ func randomise_timer():
 func _on_hitbox_2_area_entered(area: Area2D) -> void: #plays animation when flower bud is hit 
 	print("HITHITHIT")
 	#spawn flower 
+	
 	var lily_flower = lily_bloom_prefab.instantiate()
 	lily_flower.position = global_position
 	get_tree().root.add_child(lily_flower)

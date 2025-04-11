@@ -7,4 +7,3 @@ extends Node2D
 func _ready() -> void:
 	animated_lily.play("lily_bloom")
 	sparkly_sound.play()
-	

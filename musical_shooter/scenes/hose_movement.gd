@@ -5,6 +5,8 @@ var speed = 500
 const bulletPath = preload("res://water.tscn")
 var water_speed = 100
 
+@export var ufo_count:int = 0
+
 func _physics_process(_delta):
 # setup direction of movement
 	var direction = Input.get_vector("left", "right", "up", "down")
@@ -36,3 +38,5 @@ func shoot():
 	
 	get_parent().add_child(water)
 	water.position = $Marker2D2.global_position
+	
+	

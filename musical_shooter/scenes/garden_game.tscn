@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://bg0f350au30km"]
+[gd_scene load_steps=10 format=3 uid="uid://bg0f350au30km"]
 
 [ext_resource type="Script" path="res://scripts/my shooter.gd" id="1_yv2sj"]
 [ext_resource type="PackedScene" uid="uid://crmi0dyeil037" path="res://scenes/player.tscn" id="2_uxrxa"]
 [ext_resource type="Script" path="res://scripts/flower_spawner.gd" id="3_cgi6h"]
 [ext_resource type="PackedScene" uid="uid://tc15etche3ta" path="res://scenes/bud_lily.tscn" id="4_1kca7"]
-[ext_resource type="Script" path="res://scenes/flower_spawner_2.gd" id="5_dwhpf"]
-[ext_resource type="PackedScene" uid="uid://c4q1nn51rphr5" path="res://bud_lily_2.tscn" id="6_jcbot"]
 
 [sub_resource type="Theme" id="Theme_1pe4y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_roofx"]
+font_size = 126
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_osva0"]
 
@@ -40,6 +41,20 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 45
 text = "Grow Your Garden!"
 
+[node name="flowers_bloomed" type="Label" parent="CanvasLayer"]
+offset_left = 71.0
+offset_top = 328.0
+offset_right = 210.0
+offset_bottom = 389.0
+text = "Bloomed: 0"
+
+[node name="Level" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Level: 1"
+label_settings = SubResource("LabelSettings_roofx")
+
 [node name="Player" parent="." instance=ExtResource("2_uxrxa")]
 position = Vector2(953, -227)
 scale = Vector2(1.70781, 1.63668)
@@ -56,11 +71,6 @@ flower_scene = ExtResource("4_1kca7")
 radius = 500.0
 count = 8
 rate = 1000
-
-[node name="flower_spawner2" type="Marker2D" parent="."]
-position = Vector2(366, 567)
-script = ExtResource("5_dwhpf")
-flower_scene_2 = ExtResource("6_jcbot")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(885, 1262)
