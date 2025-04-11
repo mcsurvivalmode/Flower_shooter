@@ -2,8 +2,8 @@ extends Node2D
 
 # when the scene is loaded, assign these variables from the scene
 @onready var flower_spawner = $flower_spawner
-@onready var flower_scene = $bud_lily
-@export var ufo_count:int 
+#@onready var player = $Player
+@export var ufo_count:int = 0
 var target = 2
 var level = 1
 
@@ -15,7 +15,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 func _process(delta):
 	# if the dude reaches the target, advance to next level
-	if flower_scene.ufo_count == 2:
+	if ufo_count == target:
 		print("next level")
 		next_level()
 		$CanvasLayer/level.text="level: " + str(level)

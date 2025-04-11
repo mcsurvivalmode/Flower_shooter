@@ -41,13 +41,6 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 45
 text = "Grow Your Garden!"
 
-[node name="flowers_bloomed" type="Label" parent="CanvasLayer"]
-offset_left = 71.0
-offset_top = 328.0
-offset_right = 210.0
-offset_bottom = 389.0
-text = "Bloomed: 0"
-
 [node name="Level" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
 offset_right = 40.0
@@ -81,31 +74,31 @@ collision_layer = 8
 position = Vector2(0, -23.5849)
 shape = SubResource("RectangleShape2D_osva0")
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
-position = Vector2(1018, -1059)
-scale = Vector2(109.84, 4.24)
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D"]
+position = Vector2(1.25141, -547.406)
+scale = Vector2(1.0335, 1)
 collision_layer = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D4"]
 position = Vector2(0, -19.1038)
 shape = SubResource("RectangleShape2D_osva0")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(1912, -24)
-scale = Vector2(1, 6.76)
+[node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D"]
+position = Vector2(9.66315, -303.302)
+scale = Vector2(0.00940911, 1.59434)
 collision_layer = 8
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D3"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D3"]
 position = Vector2(10, 100)
 scale = Vector2(4.24, 61.4)
 shape = SubResource("RectangleShape2D_v7yxb")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(-43, 280)
-scale = Vector2(4.2, 87.84)
+[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D"]
+position = Vector2(-8.73165, -231.604)
+scale = Vector2(0.0395183, 20.717)
 collision_layer = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D2"]
 position = Vector2(0, -6.24393)
 scale = Vector2(1, 1.65015)
 shape = SubResource("RectangleShape2D_72exp")

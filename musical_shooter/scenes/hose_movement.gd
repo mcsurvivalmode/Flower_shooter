@@ -5,7 +5,7 @@ var speed = 500
 const bulletPath = preload("res://water.tscn")
 var water_speed = 100
 
-@export var ufo_count:int = 0
+
 
 func _physics_process(_delta):
 # setup direction of movement
