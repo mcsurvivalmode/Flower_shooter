@@ -58,12 +58,17 @@ position = Vector2(50.1508, 427.823)
 scale = Vector2(0.312591, -0.119389)
 
 [node name="flower_spawner" type="Marker2D" parent="."]
-position = Vector2(1441, 700)
+position = Vector2(456, 743)
 script = ExtResource("3_cgi6h")
 flower_scene = ExtResource("4_1kca7")
 radius = 500.0
 count = 8
 rate = 1000
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_1kca7")]
+position = Vector2(1993, 996)
+rotation = 3.14159
+scale = Vector2(0.0475526, -0.0386096)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(885, 1262)

@@ -2,8 +2,7 @@ extends CharacterBody2D
 
 
 @export var auto_spawn = false
-@onready var export = $"."
-@export var ufo_count:int
+@onready var scene = $".."
 
 
 var lily_bloom_prefab = preload("res://scenes/bloomed_lily.tscn")
@@ -49,8 +48,8 @@ func randomise_timer():
 
 func _on_hitbox_area_entered(area: Area2D) -> void: #plays animation when flower bud is hit 
 	print("HITHITHIT")
-	export.ufo_count += 1
-	print(export.ufo_count)
+	scene.flower_count += 1 
+	print(scene.flower_count)
 	#spawn flower 
 	var lily_flower = lily_bloom_prefab.instantiate()
 	lily_flower.position = global_position

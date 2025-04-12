@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://un7c4vjdbrpm"]
 
 [ext_resource type="Script" path="res://scripts/flower_scene.gd" id="1_fy63p"]
-[ext_resource type="Texture2D" uid="uid://bm8h2vebrupcm" path="res://place_holders/bud_lily.png" id="2_1ev3f"]
+[ext_resource type="Texture2D" uid="uid://bvs2a2n6a0eu5" path="res://lily_animation/lily_1.png" id="2_lxhmk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ks2la"]
 
@@ -26,9 +26,9 @@ wait_time = 6.823
 [node name="Marker2D" type="Marker2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-4.00006, -2)
+position = Vector2(17.2238, 0.000344753)
 scale = Vector2(0.955801, 1.21834)
-texture = ExtResource("2_1ev3f")
+texture = ExtResource("2_lxhmk")
 
 [node name="hitbox" type="Area2D" parent="."]
 
