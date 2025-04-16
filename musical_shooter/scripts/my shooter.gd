@@ -17,7 +17,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 		
 func _process(delta):
-	$CanvasLayer/Bloomed.text="Flowers Bloomed: " + str(flower_count)
+	$CanvasLayer/bloomed_flowers .text="Flowers Bloomed: " + str(flower_count)
 	# if the dude reaches the target, advance to next level
 	if flower_count == target:
 		

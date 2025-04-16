@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnqwwgwqgl1pc"]
+[gd_scene load_steps=3 format=3 uid="uid://cnqwwgwqgl1pc"]
 
-[ext_resource type="Script" path="res://scenes/splashscreen.gd" id="1_umk33"]
+[ext_resource type="Script" path="res://scripts/splashscreen.gd" id="1_umk33"]
+[ext_resource type="AudioStream" uid="uid://box2h6gw6a0wd" path="res://soundeffects/splashscreen.wav" id="2_qyxdk"]
 
 [node name="Splashscreen" type="Control"]
 layout_mode = 3
@@ -27,6 +28,14 @@ offset_right = 374.0
 offset_bottom = 318.0
 text = "Quit
 "
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_qyxdk")
+volume_db = -5.142
+pitch_scale = 0.92
+autoplay = true
+mix_target = 1
+playback_type = 1
 
 [connection signal="pressed" from="play_button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]

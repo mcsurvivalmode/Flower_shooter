@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://un7c4vjdbrpm"]
 
 [ext_resource type="Script" path="res://scripts/flower_scene.gd" id="1_fy63p"]
-[ext_resource type="Texture2D" uid="uid://bvs2a2n6a0eu5" path="res://lily_animation/lily_1.png" id="2_lxhmk"]
+[ext_resource type="Texture2D" uid="uid://bvs2a2n6a0eu5" path="res://animations/lily_animation/lily_1.png" id="2_lxhmk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ks2la"]
 
