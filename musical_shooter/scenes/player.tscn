@@ -1,10 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://crmi0dyeil037"]
+[gd_scene load_steps=6 format=3 uid="uid://crmi0dyeil037"]
 
 [ext_resource type="Script" path="res://scenes/hose_movement.gd" id="1_4geju"]
 [ext_resource type="Texture2D" uid="uid://bvikycv4dkft3" path="res://sprites/hose_1.png" id="2_u6q3w"]
+[ext_resource type="Texture2D" uid="uid://7ghfax26amw8" path="res://sprites/hose_2.png" id="3_s8kio"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cmki5"]
-size = Vector2(48, 756.5)
+size = Vector2(58, 627.5)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sqyah"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_u6q3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s8kio")
+}],
+"loop": true,
+"name": &"hose",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(0, 63)
@@ -13,7 +28,7 @@ floor_snap_length = 16.5
 script = ExtResource("1_4geju")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 45.75)
+position = Vector2(3, -18.75)
 shape = SubResource("RectangleShape2D_cmki5")
 
 [node name="Marker2D" type="Marker2D" parent="."]
@@ -21,7 +36,9 @@ shape = SubResource("RectangleShape2D_cmki5")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(38, 69)
-scale = Vector2(1.36426, 1.56738)
-texture = ExtResource("2_u6q3w")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(17, -16)
+scale = Vector2(1.1582, 1.37646)
+sprite_frames = SubResource("SpriteFrames_sqyah")
+animation = &"hose"
+frame_progress = 0.582722

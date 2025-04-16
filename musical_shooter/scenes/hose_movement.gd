@@ -4,8 +4,10 @@ extends CharacterBody2D
 var speed = 500 
 const bulletPath = preload("res://water.tscn")
 var water_speed = 100
+@onready var hosemove = $AnimatedSprite2D
 
-
+func _ready() -> void:
+	hosemove.play("hose")
 
 func _physics_process(_delta):
 # setup direction of movement

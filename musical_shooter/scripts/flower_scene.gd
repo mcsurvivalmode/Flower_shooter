@@ -8,6 +8,9 @@ extends CharacterBody2D
 var lily_bloom_prefab = preload("res://scenes/bloomed_lily.tscn")
 
 
+	
+	
+
 
 
 func movement():

@@ -74,7 +74,7 @@ scale = Vector2(1.70781, 1.63668)
 collision_mask = 8
 
 [node name="Marker2D2" type="Marker2D" parent="Player"]
-position = Vector2(50.1508, 427.823)
+position = Vector2(22.2507, 294.499)
 scale = Vector2(0.312591, -0.119389)
 
 [node name="flower_spawner" type="Marker2D" parent="."]
@@ -106,6 +106,17 @@ collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D4"]
 position = Vector2(0, -19.1038)
+scale = Vector2(1, 8.31132)
+shape = SubResource("RectangleShape2D_osva0")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="StaticBody2D"]
+position = Vector2(1.25141, -547.406)
+scale = Vector2(1.0335, 1)
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D5"]
+position = Vector2(-0.227602, 449.057)
+scale = Vector2(1, 8.31132)
 shape = SubResource("RectangleShape2D_osva0")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D"]
