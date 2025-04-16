@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=3 uid="uid://qv7m1ebxhb15"]
+
+[ext_resource type="Script" path="res://carnation_blooming.gd" id="1_v7dqq"]
+[ext_resource type="Texture2D" uid="uid://cocxxpye6r5mh" path="res://carnation_blooming/car_1.png" id="2_4ofcn"]
+[ext_resource type="Texture2D" uid="uid://kbjnvgn27lc1" path="res://carnation_blooming/car_2.png" id="3_0tub7"]
+[ext_resource type="Texture2D" uid="uid://ct0ilf4u0jtls" path="res://carnation_blooming/car_3.png" id="4_wi0lp"]
+[ext_resource type="Texture2D" uid="uid://bjayfbijnqutb" path="res://carnation_blooming/car_4.png" id="5_fpicc"]
+[ext_resource type="Texture2D" uid="uid://ri062yjkkmmb" path="res://carnation_blooming/car_5.png" id="6_ebolj"]
+[ext_resource type="Texture2D" uid="uid://cwmf841q1h7hh" path="res://carnation_blooming/car_6.png" id="7_hfqlo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m16jp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4ofcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0tub7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wi0lp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fpicc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ebolj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hfqlo")
+}],
+"loop": false,
+"name": &"car_bloom",
+"speed": 6.0
+}]
+
+[node name="carnation_blooming" type="Node2D"]
+script = ExtResource("1_v7dqq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_m16jp")
+animation = &"car_bloom"
+frame = 5
+frame_progress = 1.0
