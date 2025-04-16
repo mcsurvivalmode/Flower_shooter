@@ -22,10 +22,10 @@ func _process(delta):
 	$CanvasLayer/bloomed_flowers.text="Flowers Bloomed: " + str(flower_count)
 	# if the dude reaches the target, advance to next level
 	
-	if level == 3:
-		print("LEVEL 10")
-		final_level()
-	elif flower_count == target:
+	#if level == 3:
+		#print("LEVEL 10")
+		#final_level()
+	if flower_count == target:
 		
 		print("next level")
 		
