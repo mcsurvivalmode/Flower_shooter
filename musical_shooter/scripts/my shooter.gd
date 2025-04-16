@@ -6,19 +6,25 @@ extends Node2D
 @export var flower_count:int = 0
 
 
-var target = 2
+var target = 5
 var level = 1
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.keycode == KEY_ESCAPE:
 		get_tree().quit()	
 		
-		
+
+
 		
 func _process(delta):
+	$CanvasLayer/Bloomed.text="Flowers Bloomed: " + str(flower_count)
 	# if the dude reaches the target, advance to next level
 	if flower_count == target:
+		
 		print("next level")
+		
+		%Level.text="level: " + str(level)
+		
 		next_level()
 	#	$CanvasLayer/level.text="level: " + str(level)
 	

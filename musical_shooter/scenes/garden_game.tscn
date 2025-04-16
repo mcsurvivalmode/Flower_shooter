@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bg0f350au30km"]
+[gd_scene load_steps=11 format=3 uid="uid://bg0f350au30km"]
 
 [ext_resource type="Script" path="res://scripts/my shooter.gd" id="1_yv2sj"]
 [ext_resource type="PackedScene" uid="uid://crmi0dyeil037" path="res://scenes/player.tscn" id="2_uxrxa"]
@@ -8,7 +8,17 @@
 [sub_resource type="Theme" id="Theme_1pe4y"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_roofx"]
-font_size = 126
+font_size = 76
+font_color = Color(0.858824, 0.92549, 0.941176, 1)
+shadow_size = 21
+shadow_color = Color(0.851989, 0.706714, 0.96849, 1)
+shadow_offset = Vector2(1.275, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0x8ic"]
+font_size = 46
+font_color = Color(0.858824, 0.92549, 0.941176, 1)
+shadow_size = 56
+shadow_color = Color(0.772549, 0.698039, 0.85098, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_osva0"]
 
@@ -30,10 +40,10 @@ color = Color(0.449623, 0.665701, 0.373682, 1)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="title" type="Label" parent="CanvasLayer"]
-offset_left = 35.0
-offset_top = 26.0
-offset_right = 727.0
-offset_bottom = 129.0
+offset_left = 1416.0
+offset_top = 23.0
+offset_right = 2108.0
+offset_bottom = 126.0
 theme = SubResource("Theme_1pe4y")
 theme_override_colors/font_color = Color(0.847558, 0.764219, 0.977661, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
@@ -43,10 +53,20 @@ text = "Grow Your Garden!"
 
 [node name="Level" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 38.0
+offset_top = -10.0
+offset_right = 493.0
+offset_bottom = 162.0
 text = "Level: 1"
 label_settings = SubResource("LabelSettings_roofx")
+
+[node name="Bloomed" type="Label" parent="CanvasLayer"]
+offset_left = 42.0
+offset_top = 97.0
+offset_right = 487.0
+offset_bottom = 161.0
+text = "Flowers Bloomed: 0 "
+label_settings = SubResource("LabelSettings_0x8ic")
 
 [node name="Player" parent="." instance=ExtResource("2_uxrxa")]
 position = Vector2(953, -227)
