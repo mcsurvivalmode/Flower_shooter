@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7emkxdi3torr"]
+
+[ext_resource type="Script" path="res://butter_fly.gd" id="1_st6q4"]
+[ext_resource type="Texture2D" uid="uid://br4e0g1er5o8" path="res://place_holders/butterfly.jpg" id="2_imcx1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oo61g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uhmp"]
+
+[node name="ButterFly" type="CharacterBody2D"]
+script = ExtResource("1_st6q4")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_oo61g")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -3.8147e-06)
+scale = Vector2(-0.00406208, 0.00479412)
+texture = ExtResource("2_imcx1")
+
+[node name="butter_hit" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 13
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="butter_hit"]
+shape = SubResource("RectangleShape2D_5uhmp")
+
+[connection signal="area_entered" from="butter_hit" to="." method="_on_butter_hit_area_entered"]
