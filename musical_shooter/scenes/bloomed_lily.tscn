@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://b0whx8oinrwyb"]
 
 [ext_resource type="Texture2D" uid="uid://bvs2a2n6a0eu5" path="res://animations/lily_animation/lily_1.png" id="1_4rmig"]
-[ext_resource type="Script" path="res://scenes/blooming_lily_animation.gd" id="1_pvbb2"]
+[ext_resource type="Script" path="res://scripts/blooming_lily_animation.gd" id="1_pvbb2"]
 [ext_resource type="Texture2D" uid="uid://c42a6wom841t2" path="res://animations/lily_animation/lily_2.png" id="2_5aj7b"]
 [ext_resource type="Texture2D" uid="uid://dee7atc715tot" path="res://animations/lily_animation/lily_3.png" id="3_1sjcp"]
 [ext_resource type="Texture2D" uid="uid://c63pc1g3nr0o7" path="res://animations/lily_animation/lily_4.png" id="4_16xan"]

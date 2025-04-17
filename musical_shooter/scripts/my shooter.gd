@@ -26,9 +26,11 @@ func _process(delta):
 	
 
 	
-	if level == 10 and flower_count == target:
+	if level >= 5 and flower_count == target:
 		
 		print("LEVEL 10")
+		level = level + 1
+		%Level.text="level: " + str(level)
 		next_level()
 		final_level()
 		#set_process(false)
@@ -69,7 +71,7 @@ func next_level():
 
 func final_level():
 	flower_spawner_3.radius = randf_range(100, 600)
-	flower_spawner.count = level + 2
+	
 	flower_spawner_3.rate  = 100
 	#flower_spawner.position 
 	flower_spawner_3.spawn()	

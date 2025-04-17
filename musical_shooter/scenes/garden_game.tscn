@@ -1,12 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://bg0f350au30km"]
+[gd_scene load_steps=16 format=3 uid="uid://bg0f350au30km"]
 
 [ext_resource type="Script" path="res://scripts/my shooter.gd" id="1_yv2sj"]
+[ext_resource type="Script" path="res://scripts/timer.gd" id="2_euywk"]
 [ext_resource type="PackedScene" uid="uid://crmi0dyeil037" path="res://scenes/player.tscn" id="2_uxrxa"]
 [ext_resource type="Script" path="res://scripts/flower_spawner.gd" id="3_cgi6h"]
 [ext_resource type="PackedScene" uid="uid://tc15etche3ta" path="res://scenes/bud_lily.tscn" id="4_1kca7"]
 [ext_resource type="AudioStream" uid="uid://dlc4cxa2wpa8l" path="res://soundeffects/game sound.wav" id="5_aggvf"]
 [ext_resource type="PackedScene" uid="uid://c6sb4e77exphc" path="res://bud_car.tscn" id="5_s7lhu"]
 [ext_resource type="PackedScene" uid="uid://c7emkxdi3torr" path="res://scenes/butter_fly.tscn" id="6_0acie"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7fdpx"]
+font_size = 76
 
 [sub_resource type="Theme" id="Theme_1pe4y"]
 
@@ -43,17 +47,36 @@ color = Color(0.449623, 0.665701, 0.373682, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_euywk")
+
+[node name="timer" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 1146.0
+offset_top = -10.0
+offset_right = 1250.0
+offset_bottom = 115.0
+text = "60"
+label_settings = SubResource("LabelSettings_7fdpx")
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Control"]
+wait_time = 60.0
+
 [node name="title" type="Label" parent="CanvasLayer"]
-offset_left = 1416.0
-offset_top = 23.0
-offset_right = 2108.0
-offset_bottom = 126.0
+offset_left = 927.0
+offset_top = 19.0
+offset_right = 1885.0
+offset_bottom = 122.0
 theme = SubResource("Theme_1pe4y")
 theme_override_colors/font_color = Color(0.847558, 0.764219, 0.977661, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 45
-text = "Grow Your Garden!"
+text = "You have          seconds to grow your garden!"
 
 [node name="Level" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
@@ -101,8 +124,17 @@ rate = 1400
 position = Vector2(-624, 402)
 script = ExtResource("3_cgi6h")
 flower_scene = ExtResource("6_0acie")
-radius = 600.0
-count = 5
+radius = 800.0
+count = 1
+rate = 500
+auto_spawn = false
+
+[node name="flower_spawner4" type="Marker2D" parent="."]
+position = Vector2(-624, 702)
+script = ExtResource("3_cgi6h")
+flower_scene = ExtResource("6_0acie")
+radius = 800.0
+count = 1
 rate = 500
 auto_spawn = false
 
@@ -147,7 +179,7 @@ scale = Vector2(1, 8.31132)
 shape = SubResource("RectangleShape2D_osva0")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D"]
-position = Vector2(9.66315, -303.302)
+position = Vector2(10.6982, -311.792)
 scale = Vector2(0.00940911, 1.59434)
 collision_layer = 8
 
@@ -176,3 +208,5 @@ stream = ExtResource("5_aggvf")
 volume_db = -3.775
 autoplay = true
 mix_target = 1
+
+[connection signal="timeout" from="CanvasLayer/Control/Timer" to="CanvasLayer/Control" method="_on_timer_timeout"]

@@ -12,7 +12,7 @@ var car_bloom_prefab = preload("res://scenes/carnation_blooming.tscn")
 func movement():
 	var tween = create_tween()
 	
-	tween.tween_property(self, "position", position + Vector2.RIGHT * 2000, 5)
+	tween.tween_property(self, "position", position + Vector2.RIGHT * 3000, 5)
 	tween.tween_property(self, "position", position + Vector2.LEFT * 2000, 5)
 	#tween.tween_property(self, "position", position + Vector2.RIGHT * 800, 5)
 	
@@ -61,7 +61,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func _on_butter_hit_area_entered(area: Area2D) -> void:
 	print("butterfly hit")
-	
+	scene.flower_count -= 5
 	#spawn flower 
 	var car_flower = car_bloom_prefab.instantiate()
 	car_flower.position = global_position
