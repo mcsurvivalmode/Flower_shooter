@@ -24,11 +24,9 @@ func _process(delta):
 	$CanvasLayer/bloomed_flowers.text="Flowers Bloomed: " + str(flower_count)
 	# if the dude reaches the target, advance to next level
 	
-	if flower_count >= 80:
-		$CanvasLayer/bloomed_flowers.text="Total Flowers Bloomed: " + str(flower_count)
-		$Player.hide()
+
 	
-	elif level == 10 and flower_count == target:
+	if level == 10 and flower_count == target:
 		
 		print("LEVEL 10")
 		next_level()
