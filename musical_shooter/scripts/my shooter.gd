@@ -8,8 +8,8 @@ extends Node2D
 @export var flower_count:int = 0
 
 
-var target = 5
-var final_num = 5
+var target = 3
+
 
 @export var level = 1
 
@@ -24,13 +24,16 @@ func _process(delta):
 	$CanvasLayer/bloomed_flowers.text="Flowers Bloomed: " + str(flower_count)
 	# if the dude reaches the target, advance to next level
 	
-	elif level == 10:
+	if flower_count >= 80:
+		$CanvasLayer/bloomed_flowers.text="Total Flowers Bloomed: " + str(flower_count)
+		$Player.hide()
+	
+	elif level == 10 and flower_count == target:
 		
 		print("LEVEL 10")
 		next_level()
-		
 		final_level()
-		set_process(false)
+		#set_process(false)
 		
 			
 		
@@ -54,7 +57,7 @@ func next_level():
 	
 	#second spawner
 	flower_spawner_2.radius = randf_range(100, 600)
-	flower_spawner.count = 5
+	flower_spawner_2.count = 5
 	flower_spawner_2.rate  = 100
 	#flower_spawner.position 
 	flower_spawner_2.spawn()	
@@ -62,7 +65,7 @@ func next_level():
 	
 	print(level)
 	# next target
-	target = target + flower_spawner.count
+	target = target + flower_spawner.count + flower_spawner_2.count
 	
 	print("target:",target)
 
