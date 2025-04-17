@@ -8,6 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5uhmp"]
 
 [node name="ButterFly" type="CharacterBody2D"]
+scale = Vector2(-20.8599, 16.7739)
 script = ExtResource("1_st6q4")
 
 [node name="Timer" type="Timer" parent="."]

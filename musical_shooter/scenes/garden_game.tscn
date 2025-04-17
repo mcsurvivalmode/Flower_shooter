@@ -23,7 +23,7 @@ shadow_size = 31
 shadow_color = Color(0.85098, 0.705882, 0.968627, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_osva0"]
-size = Vector2(28.6726, 21.4359)
+size = Vector2(28.6726, 15.8258)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v7yxb"]
 
@@ -32,6 +32,8 @@ size = Vector2(20.9524, 23.5703)
 
 [node name="My shooter game" type="Node2D"]
 script = ExtResource("1_yv2sj")
+flower_count = null
+level = null
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -926.0
@@ -82,23 +84,23 @@ position = Vector2(22.2507, 294.499)
 scale = Vector2(0.312591, -0.119389)
 
 [node name="flower_spawner" type="Marker2D" parent="."]
-position = Vector2(811, 577)
+position = Vector2(412, 561)
 script = ExtResource("3_cgi6h")
 flower_scene = ExtResource("4_1kca7")
-radius = 650.0
-count = 6
+radius = 800.0
+count = 3
 rate = 100
 
 [node name="flower_spawner2" type="Marker2D" parent="."]
-position = Vector2(1055, 491)
+position = Vector2(1644, 627)
 script = ExtResource("3_cgi6h")
 flower_scene = ExtResource("5_s7lhu")
-radius = 600.0
-count = 8
+radius = 700.0
+count = 5
 rate = 1400
 
 [node name="flower_spawner3" type="Marker2D" parent="."]
-position = Vector2(192, 779)
+position = Vector2(-624, 402)
 script = ExtResource("3_cgi6h")
 flower_scene = ExtResource("6_0acie")
 radius = 600.0
@@ -107,13 +109,13 @@ rate = 500
 auto_spawn = false
 
 [node name="ButterFly" parent="." instance=ExtResource("6_0acie")]
-position = Vector2(-1543, 1008)
+position = Vector2(-1309, 3455)
 
 [node name="bud_car" parent="." instance=ExtResource("5_s7lhu")]
-position = Vector2(-1543, 1008)
+position = Vector2(-1309, 3455)
 
 [node name="lily_bud" parent="." instance=ExtResource("4_1kca7")]
-position = Vector2(-1539, 1260)
+position = Vector2(-1305, 3707)
 rotation = 3.14159
 scale = Vector2(0.0475526, -0.0386096)
 
@@ -132,7 +134,7 @@ scale = Vector2(1.0335, 1)
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D4"]
-position = Vector2(-0.309539, -167.453)
+position = Vector2(-0.309539, -190.767)
 scale = Vector2(1, 8.31132)
 shape = SubResource("RectangleShape2D_osva0")
 

@@ -10,11 +10,13 @@ var car_bloom_prefab = preload("res://scenes/carnation_blooming.tscn")
 
 
 func movement():
-	var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_EXPO)	
-	tween.tween_property(self, "position", position + Vector2.RIGHT * 700, 5)
-	#tween.tween_property(self, "rotation", PI, 4)
-	tween.tween_property(self, "position", position + Vector2.LEFT * 700, 5)
-	tween.tween_property(self, "position", position + Vector2.RIGHT * 700, 5)
+	var tween = create_tween()
+	
+	tween.tween_property(self, "position", position + Vector2.RIGHT * 2000, 5)
+	tween.tween_property(self, "position", position + Vector2.LEFT * 2000, 5)
+	#tween.tween_property(self, "position", position + Vector2.RIGHT * 800, 5)
+	
+	
 	#tween.tween_property(self, "position", position + Vector2.UP * 400, 5)
 	#tween.tween_property(self, "position", position + Vector2.DOWN * 400, 5)
 	tween.finished.connect(movement)
@@ -25,7 +27,7 @@ func _ready() -> void:
 	# Tween my scale using elastic	
 	if ! Engine.is_editor_hint():
 		scale = Vector2.ZERO
-		var tween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_IN_OUT)
+		var tween = create_tween()
 		tween.tween_property(self, "scale", Vector2.ONE, 0.1)
 		tween.finished.connect(movement)
 	
@@ -48,6 +50,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("car hit")
 	scene.flower_count += 1 
 	print(scene.flower_count)
+
 	#spawn flower 
 	var car_flower = car_bloom_prefab.instantiate()
 	car_flower.position = global_position

@@ -9,7 +9,9 @@ extends Node2D
 
 
 var target = 5
-var level = 1
+var final_num = 5
+
+@export var level = 1
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.keycode == KEY_ESCAPE:
@@ -22,13 +24,21 @@ func _process(delta):
 	$CanvasLayer/bloomed_flowers.text="Flowers Bloomed: " + str(flower_count)
 	# if the dude reaches the target, advance to next level
 	
-	#if level == 3:
-		#print("LEVEL 10")
-		#final_level()
-	if flower_count == target:
+	elif level == 10:
+		
+		print("LEVEL 10")
+		next_level()
+		
+		final_level()
+		set_process(false)
+		
+			
+		
+	elif flower_count == target:
 		
 		print("next level")
-		
+	
+		level = level + 1
 		%Level.text="level: " + str(level)
 		
 		next_level()
@@ -37,22 +47,23 @@ func _process(delta):
 		
 func next_level():
 	flower_spawner.radius = randf_range(100, 600)
-	flower_spawner.count = level + 2
+	flower_spawner.count = 3
 	flower_spawner.rate  = 100
 	#flower_spawner.position 
 	flower_spawner.spawn()	
 	
 	#second spawner
 	flower_spawner_2.radius = randf_range(100, 600)
-	flower_spawner.count = level + 3
+	flower_spawner.count = 5
 	flower_spawner_2.rate  = 100
 	#flower_spawner.position 
 	flower_spawner_2.spawn()	
 	
-	level = level + 1
+	
 	print(level)
 	# next target
 	target = target + flower_spawner.count
+	
 	print("target:",target)
 
 func final_level():

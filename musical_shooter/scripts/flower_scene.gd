@@ -27,6 +27,7 @@ func movement():
 
 func _ready() -> void:
 	# Tween my scale using elastic	
+	
 	if ! Engine.is_editor_hint():
 		scale = Vector2.ZERO
 		var tween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_IN_OUT)
