@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://drrhyw1jd6fsn"]
+[gd_scene load_steps=2 format=3 uid="uid://obql7xrso8dw"]
 
-[node name="end scene" type="Node2D"]
+[ext_resource type="Script" path="res://scenes/end_scene.gd" id="1_k2b72"]
+
+[node name="End_scene" type="Node2D"]
+script = ExtResource("1_k2b72")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="flowers bloomed" type="Label" parent="CanvasLayer"]
+offset_top = 34.0
+offset_right = 40.0
+offset_bottom = 57.0
+text = "you bloomed 100 flowers!"
+
+[node name="Level" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "You reached level 10! "
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(965, 527)
+zoom = Vector2(0.65, 0.65)
