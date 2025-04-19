@@ -18,7 +18,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_tree().quit()	
 
 
-
+func _on_button_pressed() -> void:
+	next_level()
+	$CanvasLayer/Button.hide()
 		
 func _process(delta):
 	$CanvasLayer/bloomed_flowers.text="Flowers Bloomed: " + str(flower_count)

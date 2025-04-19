@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://bg0f350au30km"]
+[gd_scene load_steps=17 format=3 uid="uid://bg0f350au30km"]
 
 [ext_resource type="Script" path="res://scripts/my shooter.gd" id="1_yv2sj"]
+[ext_resource type="Texture2D" uid="uid://rsk4rrn325d7" path="res://sprites/flower_backgorund.png" id="2_85snp"]
 [ext_resource type="Script" path="res://scripts/timer.gd" id="2_euywk"]
 [ext_resource type="PackedScene" uid="uid://crmi0dyeil037" path="res://scenes/player.tscn" id="2_uxrxa"]
 [ext_resource type="Script" path="res://scripts/flower_spawner.gd" id="3_cgi6h"]
@@ -44,6 +45,11 @@ offset_right = -886.0
 offset_bottom = -992.0
 scale = Vector2(94.7589, 62.386)
 color = Color(0.449623, 0.665701, 0.373682, 1)
+
+[node name="FlowerBackgorund" type="Sprite2D" parent="ColorRect"]
+position = Vector2(20.0192, 24.0919)
+scale = Vector2(0.0166486, 0.0254538)
+texture = ExtResource("2_85snp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -97,6 +103,13 @@ label_settings = SubResource("LabelSettings_7fdpx")
 [node name="Timer" type="Timer" parent="CanvasLayer/Control"]
 wait_time = 5.0
 
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 81.0
+offset_top = 235.0
+offset_right = 1773.0
+offset_bottom = 757.0
+text = "PLay!"
+
 [node name="Player" parent="." instance=ExtResource("2_uxrxa")]
 position = Vector2(939, -653)
 scale = Vector2(2.82781, 2.23668)
@@ -113,6 +126,7 @@ flower_scene = ExtResource("4_1kca7")
 radius = 800.0
 count = 3
 rate = 100
+auto_spawn = false
 
 [node name="flower_spawner2" type="Marker2D" parent="."]
 position = Vector2(1644, 627)
@@ -121,6 +135,7 @@ flower_scene = ExtResource("5_s7lhu")
 radius = 700.0
 count = 5
 rate = 1400
+auto_spawn = false
 
 [node name="flower_spawner3" type="Marker2D" parent="."]
 position = Vector2(-624, 402)
@@ -143,11 +158,13 @@ auto_spawn = false
 [node name="ButterFly" parent="." instance=ExtResource("6_0acie")]
 position = Vector2(-1309, 3455)
 
-[node name="bud_car" parent="." instance=ExtResource("5_s7lhu")]
-position = Vector2(-1309, 3455)
+[node name="bud_car" parent="ButterFly" instance=ExtResource("5_s7lhu")]
+position = Vector2(0, 0)
+rotation = 3.14159
+scale = Vector2(0.0479389, -0.0596164)
 
-[node name="lily_bud" parent="." instance=ExtResource("4_1kca7")]
-position = Vector2(-1305, 3707)
+[node name="lily_bud" parent="ButterFly/bud_car" instance=ExtResource("4_1kca7")]
+position = Vector2(4, 252)
 rotation = 3.14159
 scale = Vector2(0.0475526, -0.0386096)
 
@@ -212,3 +229,5 @@ autoplay = true
 mix_target = 1
 
 [connection signal="timeout" from="CanvasLayer/Control/Timer" to="CanvasLayer/Control" method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Control" method="_on_button_pressed"]

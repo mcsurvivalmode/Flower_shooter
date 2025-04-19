@@ -7,7 +7,7 @@ func _ready():
 	label = $timer
 	timer = $Timer
 	
-	timer.start()
+	
 
 	
 func _process(delta):
@@ -21,3 +21,9 @@ func update_label_text():
 
 func _on_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://scenes/end_scene.tscn")
+
+
+func _on_button_pressed() -> void:
+	
+	
+	timer.start()

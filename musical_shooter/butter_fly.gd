@@ -46,17 +46,6 @@ func randomise_timer():
 
 	 
 
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	print("car hit")
-	scene.flower_count += 1 
-	print(scene.flower_count)
-
-	#spawn flower 
-	var car_flower = car_bloom_prefab.instantiate()
-	car_flower.position = global_position
-	get_tree().root.add_child(car_flower)
-	queue_free()
-	area.queue_free()
 
 
 func _on_butter_hit_area_entered(area: Area2D) -> void:

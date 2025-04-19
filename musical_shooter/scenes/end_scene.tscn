@@ -1,10 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://b87jcmsq8bx8t"]
+[gd_scene load_steps=3 format=3 uid="uid://b87jcmsq8bx8t"]
 
 [ext_resource type="Script" path="res://scripts/end_scene.gd" id="1_js0y6"]
+[ext_resource type="Texture2D" uid="uid://rsk4rrn325d7" path="res://sprites/flower_backgorund.png" id="2_gu421"]
 
 [node name="end_scene" type="Node2D"]
 script = ExtResource("1_js0y6")
 
+[node name="FlowerBackgorund" type="Sprite2D" parent="."]
+position = Vector2(962, 542)
+texture = ExtResource("2_gu421")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+z_index = -2
+offset_left = -170.0
+offset_top = -82.0
+offset_right = 2130.0
+offset_bottom = 1214.0
+color = Color(0.592157, 0.741176, 0.352941, 1)
+
 [node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 60.0
+offset_top = 39.0
+offset_right = 100.0
+offset_bottom = 62.0
+text = "hiii
+"
