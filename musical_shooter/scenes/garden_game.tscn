@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://scripts/flower_spawner.gd" id="3_cgi6h"]
 [ext_resource type="PackedScene" uid="uid://tc15etche3ta" path="res://scenes/bud_lily.tscn" id="4_1kca7"]
 [ext_resource type="AudioStream" uid="uid://dlc4cxa2wpa8l" path="res://soundeffects/game sound.wav" id="5_aggvf"]
-[ext_resource type="PackedScene" uid="uid://c6sb4e77exphc" path="res://bud_car.tscn" id="5_s7lhu"]
+[ext_resource type="PackedScene" uid="uid://c6sb4e77exphc" path="res://scenes/bud_car.tscn" id="5_s7lhu"]
 [ext_resource type="PackedScene" uid="uid://c7emkxdi3torr" path="res://scenes/butter_fly.tscn" id="6_0acie"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7vctm"]
@@ -101,7 +101,7 @@ text = "60"
 label_settings = SubResource("LabelSettings_7fdpx")
 
 [node name="Timer" type="Timer" parent="CanvasLayer/Control"]
-wait_time = 5.0
+wait_time = 60.0
 
 [node name="Button" type="Button" parent="CanvasLayer"]
 offset_left = 81.0
@@ -138,7 +138,7 @@ rate = 1400
 auto_spawn = false
 
 [node name="flower_spawner3" type="Marker2D" parent="."]
-position = Vector2(-624, 402)
+position = Vector2(-671, 489)
 script = ExtResource("3_cgi6h")
 flower_scene = ExtResource("6_0acie")
 radius = 800.0
@@ -147,7 +147,7 @@ rate = 500
 auto_spawn = false
 
 [node name="flower_spawner4" type="Marker2D" parent="."]
-position = Vector2(-624, 702)
+position = Vector2(-631, 1166)
 script = ExtResource("3_cgi6h")
 flower_scene = ExtResource("6_0acie")
 radius = 800.0
@@ -156,9 +156,11 @@ rate = 500
 auto_spawn = false
 
 [node name="ButterFly" parent="." instance=ExtResource("6_0acie")]
+visible = false
 position = Vector2(-1309, 3455)
 
 [node name="bud_car" parent="ButterFly" instance=ExtResource("5_s7lhu")]
+visible = false
 position = Vector2(0, 0)
 rotation = 3.14159
 scale = Vector2(0.0479389, -0.0596164)

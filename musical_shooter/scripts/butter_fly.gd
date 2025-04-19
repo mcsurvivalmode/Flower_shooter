@@ -3,9 +3,9 @@ extends CharacterBody2D
 
 @export var auto_spawn = false
 @onready var scene = $".."
+@onready var animated_fly = $AnimatedSprite2D
 
-
-var car_bloom_prefab = preload("res://scenes/carnation_blooming.tscn")
+var hit_prefab = preload("res://scenes/butterfly_hit.tscn")
 
 
 
@@ -13,7 +13,7 @@ func movement():
 	var tween = create_tween()
 	
 	tween.tween_property(self, "position", position + Vector2.RIGHT * 3000, 5)
-	tween.tween_property(self, "position", position + Vector2.LEFT * 2000, 5)
+
 	#tween.tween_property(self, "position", position + Vector2.RIGHT * 800, 5)
 	
 	
@@ -24,6 +24,8 @@ func movement():
 	pass
 
 func _ready() -> void:
+	animated_fly.play("fly")
+	
 	# Tween my scale using elastic	
 	if ! Engine.is_editor_hint():
 		scale = Vector2.ZERO
@@ -43,17 +45,12 @@ func randomise_timer():
 	
 
 
-
-	 
-
-
-
 func _on_butter_hit_area_entered(area: Area2D) -> void:
 	print("butterfly hit")
 	scene.flower_count -= 5
 	#spawn flower 
-	var car_flower = car_bloom_prefab.instantiate()
-	car_flower.position = global_position
-	get_tree().root.add_child(car_flower)
+	var hit_anim = hit_prefab.instantiate()
+	hit_anim.position = global_position
+	get_tree().root.add_child(hit_anim)
 	queue_free()
 	area.queue_free()

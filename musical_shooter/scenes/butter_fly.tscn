@@ -1,11 +1,43 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7emkxdi3torr"]
+[gd_scene load_steps=10 format=3 uid="uid://c7emkxdi3torr"]
 
-[ext_resource type="Script" path="res://butter_fly.gd" id="1_st6q4"]
-[ext_resource type="Texture2D" uid="uid://br4e0g1er5o8" path="res://place_holders/butterfly.jpg" id="2_imcx1"]
+[ext_resource type="Script" path="res://scripts/butter_fly.gd" id="1_st6q4"]
+[ext_resource type="Texture2D" uid="uid://vq2l1sinfsis" path="res://animations/butterfly_fly/fly_2.png" id="2_mjl2e"]
+[ext_resource type="Texture2D" uid="uid://cm0vrjo4oytal" path="res://animations/butterfly_fly/fly_1.png" id="3_31qdo"]
+[ext_resource type="Texture2D" uid="uid://cn3h0wfs4hh5c" path="res://animations/butterfly_fly/fly_3.png" id="4_mb3nd"]
+[ext_resource type="Texture2D" uid="uid://6kw16udvnikl" path="res://animations/butterfly_fly/fly_4.png" id="5_l2x38"]
+[ext_resource type="Texture2D" uid="uid://c60bp133rmxc2" path="res://animations/butterfly_fly/fly_5.png" id="6_f2v31"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oo61g"]
+size = Vector2(206.425, 65.757)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5uhmp"]
+size = Vector2(2.40903, 18.7456)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3604b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mjl2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_31qdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mjl2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mb3nd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_l2x38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f2v31")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
 
 [node name="ButterFly" type="CharacterBody2D"]
 scale = Vector2(-20.8599, 16.7739)
@@ -14,20 +46,27 @@ script = ExtResource("1_st6q4")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-24.6406, 16.6032)
+scale = Vector2(1, 0.999999)
 shape = SubResource("RectangleShape2D_oo61g")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -3.8147e-06)
-scale = Vector2(-0.00406208, 0.00479412)
-texture = ExtResource("2_imcx1")
-
 [node name="butter_hit" type="Area2D" parent="."]
+position = Vector2(161.746, -458.391)
+scale = Vector2(86.7027, -6.59861)
 collision_layer = 2
 collision_mask = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="butter_hit"]
+position = Vector2(-2.15221, -77.0427)
 shape = SubResource("RectangleShape2D_5uhmp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4.0748, 155.36)
+rotation = -4.68097
+sprite_frames = SubResource("SpriteFrames_3604b")
+animation = &"fly"
+frame_progress = 0.217642
 
 [connection signal="area_entered" from="butter_hit" to="." method="_on_butter_hit_area_entered"]

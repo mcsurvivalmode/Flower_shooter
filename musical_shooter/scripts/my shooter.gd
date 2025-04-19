@@ -3,7 +3,8 @@ extends Node2D
 # when the scene is loaded, assign these variables from the scene
 @onready var flower_spawner = $flower_spawner
 @onready var flower_spawner_2 = $flower_spawner2
-@onready var flower_spawner_3 = $flower_spawner3
+@onready var flower_spawner_3 = $flower_spawner3#
+@onready var flower_spawner_4 = $flower_spawner4
 
 @export var flower_count:int = 0
 
@@ -78,3 +79,8 @@ func final_level():
 	#flower_spawner.position 
 	flower_spawner_3.spawn()	
 	
+	flower_spawner_4.radius = randf_range(100, 600)
+	
+	flower_spawner_4.rate  = 100
+	#flower_spawner.position 
+	flower_spawner_4.spawn()	

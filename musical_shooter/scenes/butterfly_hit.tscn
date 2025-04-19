@@ -1,0 +1,89 @@
+[gd_scene load_steps=13 format=3 uid="uid://dw85u5d5klq1m"]
+
+[ext_resource type="Script" path="res://scripts/butterfly_anim.gd" id="1_aahny"]
+[ext_resource type="AudioStream" uid="uid://c3t0b0si888cr" path="res://soundeffects/Butterfly_For_Faye.wav" id="2_k5v7d"]
+[ext_resource type="Texture2D" uid="uid://dbarrwmxib78f" path="res://animations/hurt_fly/spin1.png" id="3_ykyq1"]
+[ext_resource type="Texture2D" uid="uid://blecwyyxcyixn" path="res://animations/hurt_fly/spin2.png" id="4_pwb2a"]
+[ext_resource type="Texture2D" uid="uid://nd25a3ggr80e" path="res://animations/hurt_fly/spin3.png" id="5_4silg"]
+[ext_resource type="Texture2D" uid="uid://cbo3ximbf6txc" path="res://animations/hurt_fly/spin4.png" id="6_j7r5b"]
+[ext_resource type="Texture2D" uid="uid://baj6iyghk4l57" path="res://animations/hurt_fly/spin5.png" id="7_lixcc"]
+[ext_resource type="Texture2D" uid="uid://c85hui4fbh0e4" path="res://animations/hurt_fly/spin6.png" id="8_jkdjf"]
+[ext_resource type="Texture2D" uid="uid://xahrflm168po" path="res://animations/hurt_fly/spin7.png" id="9_qhqy7"]
+[ext_resource type="Texture2D" uid="uid://ddd52th7tatjp" path="res://animations/hurt_fly/spin8.png" id="10_nn280"]
+[ext_resource type="Texture2D" uid="uid://bdklb52bd60n" path="res://animations/hurt_fly/spin9.png" id="11_5qj58"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v7ls4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ykyq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ykyq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pwb2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4silg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_j7r5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lixcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jkdjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qhqy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nn280")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5qj58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pwb2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4silg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_j7r5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lixcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jkdjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qhqy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nn280")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5qj58")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 20.0
+}]
+
+[node name="butterfly_hit" type="Node2D"]
+script = ExtResource("1_aahny")
+
+[node name="hurt_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_k5v7d")
+volume_db = -0.625
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(52, 67)
+sprite_frames = SubResource("SpriteFrames_v7ls4")
+animation = &"hit"
+frame = 17
+frame_progress = 1.0
