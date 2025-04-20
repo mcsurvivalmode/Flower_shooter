@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bg0f350au30km"]
+[gd_scene load_steps=21 format=3 uid="uid://bg0f350au30km"]
 
 [ext_resource type="Script" path="res://scripts/my shooter.gd" id="1_yv2sj"]
 [ext_resource type="Texture2D" uid="uid://rsk4rrn325d7" path="res://sprites/flower_backgorund.png" id="2_85snp"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://crmi0dyeil037" path="res://scenes/player.tscn" id="2_uxrxa"]
 [ext_resource type="Script" path="res://scripts/flower_spawner.gd" id="3_cgi6h"]
 [ext_resource type="PackedScene" uid="uid://tc15etche3ta" path="res://scenes/bud_lily.tscn" id="4_1kca7"]
+[ext_resource type="Texture2D" uid="uid://deiio3s2iuocv" path="res://animations/SPLASHSCREEN/SPLASHSCREEN1.png" id="4_5b2jr"]
+[ext_resource type="Texture2D" uid="uid://b8hpbyqywykmw" path="res://animations/SPLASHSCREEN/SPLASHSCREEN2.png" id="5_ag26f"]
 [ext_resource type="AudioStream" uid="uid://dlc4cxa2wpa8l" path="res://soundeffects/game sound.wav" id="5_aggvf"]
 [ext_resource type="PackedScene" uid="uid://c6sb4e77exphc" path="res://scenes/bud_car.tscn" id="5_s7lhu"]
 [ext_resource type="PackedScene" uid="uid://c7emkxdi3torr" path="res://scenes/butter_fly.tscn" id="6_0acie"]
@@ -17,7 +19,6 @@ shadow_color = Color(0.85098, 0.705882, 0.968627, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_roofx"]
 font_size = 76
-font_color = Color(0.858824, 0.92549, 0.941176, 1)
 shadow_size = 21
 shadow_color = Color(0.851989, 0.706714, 0.96849, 1)
 shadow_offset = Vector2(1.275, 1)
@@ -26,6 +27,22 @@ shadow_offset = Vector2(1.275, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_7fdpx"]
 font_size = 76
+
+[sub_resource type="Theme" id="Theme_bcgut"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h6xre"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_5b2jr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ag26f")
+}],
+"loop": true,
+"name": &"SPLASHSCREEN",
+"speed": 2.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_osva0"]
 size = Vector2(28.6726, 15.8258)
@@ -59,6 +76,14 @@ offset_top = 131.0
 offset_right = 412.0
 offset_bottom = 188.0
 text = "Flowers Bloomed: 0"
+label_settings = SubResource("LabelSettings_7vctm")
+
+[node name="score" type="Label" parent="CanvasLayer"]
+offset_left = 26.0
+offset_top = 198.0
+offset_right = 412.0
+offset_bottom = 255.0
+text = "Points: 0"
 label_settings = SubResource("LabelSettings_7vctm")
 
 [node name="Level" type="Label" parent="CanvasLayer"]
@@ -104,11 +129,18 @@ label_settings = SubResource("LabelSettings_7fdpx")
 wait_time = 60.0
 
 [node name="Button" type="Button" parent="CanvasLayer"]
-offset_left = 81.0
-offset_top = 235.0
-offset_right = 1773.0
-offset_bottom = 757.0
-text = "PLay!"
+offset_left = -33.0
+offset_top = -24.0
+offset_right = 2061.0
+offset_bottom = 1159.0
+theme = SubResource("Theme_bcgut")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Button"]
+unique_name_in_owner = true
+position = Vector2(994, 566)
+sprite_frames = SubResource("SpriteFrames_h6xre")
+animation = &"SPLASHSCREEN"
+frame_progress = 0.13813
 
 [node name="Player" parent="." instance=ExtResource("2_uxrxa")]
 position = Vector2(939, -653)
@@ -126,7 +158,6 @@ flower_scene = ExtResource("4_1kca7")
 radius = 800.0
 count = 3
 rate = 100
-auto_spawn = false
 
 [node name="flower_spawner2" type="Marker2D" parent="."]
 position = Vector2(1644, 627)
@@ -135,25 +166,22 @@ flower_scene = ExtResource("5_s7lhu")
 radius = 700.0
 count = 5
 rate = 1400
-auto_spawn = false
 
 [node name="flower_spawner3" type="Marker2D" parent="."]
-position = Vector2(-671, 489)
+position = Vector2(-627, 503)
 script = ExtResource("3_cgi6h")
 flower_scene = ExtResource("6_0acie")
 radius = 800.0
 count = 1
 rate = 500
-auto_spawn = false
 
 [node name="flower_spawner4" type="Marker2D" parent="."]
-position = Vector2(-631, 1166)
+position = Vector2(-576, 1139)
 script = ExtResource("3_cgi6h")
 flower_scene = ExtResource("6_0acie")
 radius = 800.0
 count = 1
 rate = 500
-auto_spawn = false
 
 [node name="ButterFly" parent="." instance=ExtResource("6_0acie")]
 visible = false
@@ -166,6 +194,7 @@ rotation = 3.14159
 scale = Vector2(0.0479389, -0.0596164)
 
 [node name="lily_bud" parent="ButterFly/bud_car" instance=ExtResource("4_1kca7")]
+visible = false
 position = Vector2(4, 252)
 rotation = 3.14159
 scale = Vector2(0.0475526, -0.0386096)

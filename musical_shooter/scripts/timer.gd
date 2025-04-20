@@ -6,6 +6,7 @@ var timer = Timer
 func _ready():
 	label = $timer
 	timer = $Timer
+
 	
 	
 

@@ -1,28 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://b87jcmsq8bx8t"]
+[gd_scene load_steps=4 format=3 uid="uid://b87jcmsq8bx8t"]
 
 [ext_resource type="Script" path="res://scripts/end_scene.gd" id="1_js0y6"]
 [ext_resource type="Texture2D" uid="uid://rsk4rrn325d7" path="res://sprites/flower_backgorund.png" id="2_gu421"]
+[ext_resource type="Texture2D" uid="uid://c5omm4oiljfk1" path="res://sprites/well done.png" id="3_t56pm"]
 
 [node name="end_scene" type="Node2D"]
 script = ExtResource("1_js0y6")
 
-[node name="FlowerBackgorund" type="Sprite2D" parent="."]
-position = Vector2(962, 542)
-texture = ExtResource("2_gu421")
-
 [node name="ColorRect" type="ColorRect" parent="."]
 show_behind_parent = true
-z_index = -2
-offset_left = -170.0
-offset_top = -82.0
-offset_right = 2130.0
-offset_bottom = 1214.0
+z_index = -7
+offset_left = -711.0
+offset_top = -387.0
+offset_right = 3354.0
+offset_bottom = 1904.0
 color = Color(0.592157, 0.741176, 0.352941, 1)
 
-[node name="Label" type="Label" parent="."]
-offset_left = 60.0
-offset_top = 39.0
-offset_right = 100.0
-offset_bottom = 62.0
-text = "hiii
-"
+[node name="FlowerBackgorund" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1680.67, 943.5)
+scale = Vector2(1.5713, 1.5713)
+texture = ExtResource("2_gu421")
+
+[node name="WellDone" type="Sprite2D" parent="."]
+position = Vector2(946, -11)
+texture = ExtResource("3_t56pm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(967, 554)
+zoom = Vector2(0.635, 0.635)

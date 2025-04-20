@@ -47,7 +47,7 @@ func randomise_timer():
 
 func _on_butter_hit_area_entered(area: Area2D) -> void:
 	print("butterfly hit")
-	scene.flower_count -= 5
+	scene.score -= 5
 	#spawn flower 
 	var hit_anim = hit_prefab.instantiate()
 	hit_anim.position = global_position
