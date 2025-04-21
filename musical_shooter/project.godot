@@ -60,3 +60,8 @@ enter={
 2d_physics/layer_2="flowers"
 2d_physics/layer_3="water"
 2d_physics/layer_4="walls"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
