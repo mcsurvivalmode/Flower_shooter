@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deiio3s2iuocv"
-path="res://.godot/imported/SPLASHSCREEN1.png-db0aa1ae3694b25969500c5e8f955097.ctex"
+uid="uid://cyw1nhdcwydgq"
+path="res://.godot/imported/leaf.png-ce8bc19db9bed79d0fee01aeb3e3fe82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animations/SPLASHSCREEN/SPLASHSCREEN1.png"
-dest_files=["res://.godot/imported/SPLASHSCREEN1.png-db0aa1ae3694b25969500c5e8f955097.ctex"]
+source_file="res://sprites/leaf.png"
+dest_files=["res://.godot/imported/leaf.png-ce8bc19db9bed79d0fee01aeb3e3fe82.ctex"]
 
 [params]
 

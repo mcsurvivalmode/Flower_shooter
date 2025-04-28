@@ -6,10 +6,7 @@ extends CharacterBody2D
 
 
 var lily_bloom_prefab = preload("res://scenes/bloomed_lily.tscn")
-
-
-	
-	
+@export var leaf_prefab : PackedScene
 
 
 
@@ -54,7 +51,11 @@ func _on_hitbox_area_entered(area: Area2D) -> void: #plays animation when flower
 	print("HITHITHIT")
 	scene.score+= 1 
 	scene.flower_count += 1 
-	#spawn flower 
+	
+	var leafs = leaf_prefab.instantiate()
+	leafs.position = global_position
+	
+	
 	var lily_flower = lily_bloom_prefab.instantiate()
 	lily_flower.position = global_position
 	get_tree().root.add_child(lily_flower)

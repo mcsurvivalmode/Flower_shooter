@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://crmi0dyeil037" path="res://scenes/player.tscn" id="2_uxrxa"]
 [ext_resource type="Script" path="res://scripts/flower_spawner.gd" id="3_cgi6h"]
 [ext_resource type="PackedScene" uid="uid://tc15etche3ta" path="res://scenes/bud_lily.tscn" id="4_1kca7"]
-[ext_resource type="Texture2D" uid="uid://deiio3s2iuocv" path="res://animations/SPLASHSCREEN/SPLASHSCREEN1.png" id="4_5b2jr"]
-[ext_resource type="Texture2D" uid="uid://b8hpbyqywykmw" path="res://animations/SPLASHSCREEN/SPLASHSCREEN2.png" id="5_ag26f"]
+[ext_resource type="Texture2D" uid="uid://vh3ut2jdvpxg" path="res://animations/SPLASHSCREEN1.png" id="4_jec0w"]
 [ext_resource type="AudioStream" uid="uid://dlc4cxa2wpa8l" path="res://soundeffects/game sound.wav" id="5_aggvf"]
+[ext_resource type="Texture2D" uid="uid://b30fkkltcpldq" path="res://animations/SPLASHSCREEN2.png" id="5_cd0ok"]
 [ext_resource type="PackedScene" uid="uid://c6sb4e77exphc" path="res://scenes/bud_car.tscn" id="5_s7lhu"]
 [ext_resource type="PackedScene" uid="uid://c7emkxdi3torr" path="res://scenes/butter_fly.tscn" id="6_0acie"]
 
@@ -34,10 +34,10 @@ font_size = 76
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_5b2jr")
+"texture": ExtResource("4_jec0w")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_ag26f")
+"texture": ExtResource("5_cd0ok")
 }],
 "loop": true,
 "name": &"SPLASHSCREEN",
@@ -140,7 +140,7 @@ unique_name_in_owner = true
 position = Vector2(994, 566)
 sprite_frames = SubResource("SpriteFrames_h6xre")
 animation = &"SPLASHSCREEN"
-frame_progress = 0.13813
+frame_progress = 0.0492386
 
 [node name="Player" parent="." instance=ExtResource("2_uxrxa")]
 position = Vector2(939, -653)

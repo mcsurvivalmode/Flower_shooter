@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var scene = $".."
 @onready var animated_fly = $AnimatedSprite2D
 
+
 var hit_prefab = preload("res://scenes/butterfly_hit.tscn")
 
 
@@ -49,6 +50,8 @@ func _on_butter_hit_area_entered(area: Area2D) -> void:
 	print("butterfly hit")
 	scene.score -= 5
 	#spawn flower 
+	
+	
 	var hit_anim = hit_prefab.instantiate()
 	hit_anim.position = global_position
 	get_tree().root.add_child(hit_anim)

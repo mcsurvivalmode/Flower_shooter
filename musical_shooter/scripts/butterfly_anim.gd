@@ -5,6 +5,7 @@ extends Node2D
 
 
 func _ready() -> void:
+
 	animated_hit.play("hit")
 	hurt_sound.play()
 	await get_tree().create_timer(1.0).timeout		

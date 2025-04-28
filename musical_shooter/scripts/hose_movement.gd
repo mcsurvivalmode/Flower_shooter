@@ -5,6 +5,7 @@ var speed = 500
 const bulletPath = preload("res://scenes/water.tscn")
 var water_speed = 100
 @onready var hosemove = $AnimatedSprite2D
+@onready var waterNoise = $AudioStreamPlayer
 
 func _ready() -> void:
 	hosemove.play("hose")
@@ -31,14 +32,19 @@ func _physics_process(_delta):
 		#SHOOTING??
 	
 func _process(_delta):
+	
 	if Input.is_action_just_pressed("space"):
+		$CPUParticles2D.emitting = true
 		print("SHOOOT")
 		shoot()
 		
 func shoot():
+	waterNoise.play()
+	
 	var water = bulletPath.instantiate()
 	
 	get_parent().add_child(water)
-	water.position = $Marker2D2.global_position
+	water.position = $Marker2D.global_position
+	
 	
 	

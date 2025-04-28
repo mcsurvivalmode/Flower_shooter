@@ -26,6 +26,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_button_pressed() -> void:
 	#next_level()
 	$CanvasLayer/Button.hide()
+	next_level()
 	
 	
 	

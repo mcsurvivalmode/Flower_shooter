@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://tc15etche3ta"]
+[gd_scene load_steps=6 format=3 uid="uid://tc15etche3ta"]
 
 [ext_resource type="Script" path="res://scripts/flower_scene.gd" id="1_bm7cm"]
 [ext_resource type="Texture2D" uid="uid://bvs2a2n6a0eu5" path="res://animations/lily_animation/lily_1.png" id="2_b16f8"]
+[ext_resource type="PackedScene" uid="uid://d23f536q1ahv6" path="res://leafs.tscn" id="2_emw4p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ks2la"]
 
@@ -15,6 +16,7 @@ scale = Vector2(-0.0475526, 0.0386096)
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("1_bm7cm")
+leaf_prefab = ExtResource("2_emw4p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, -1.5)

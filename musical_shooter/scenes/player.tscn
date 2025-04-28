@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://crmi0dyeil037"]
+[gd_scene load_steps=7 format=3 uid="uid://crmi0dyeil037"]
 
 [ext_resource type="Script" path="res://scripts/hose_movement.gd" id="1_4geju"]
 [ext_resource type="Texture2D" uid="uid://bvikycv4dkft3" path="res://sprites/hose_1.png" id="2_u6q3w"]
 [ext_resource type="Texture2D" uid="uid://7ghfax26amw8" path="res://sprites/hose_2.png" id="3_s8kio"]
+[ext_resource type="AudioStream" uid="uid://c5fexoxhe338j" path="res://soundeffects/water-drip-45622.wav" id="4_fuqua"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cmki5"]
 size = Vector2(58, 627.5)
@@ -32,6 +33,7 @@ position = Vector2(3, -18.75)
 shape = SubResource("RectangleShape2D_cmki5")
 
 [node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(25, 315)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
@@ -42,3 +44,27 @@ scale = Vector2(1.1582, 1.37646)
 sprite_frames = SubResource("SpriteFrames_sqyah")
 animation = &"hose"
 frame_progress = 0.582722
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_fuqua")
+volume_db = -6.94
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(23, 307)
+rotation = 1.62396
+emitting = false
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 80.83
+spread = 101.6
+initial_velocity_min = 520.62
+initial_velocity_max = 520.62
+angular_velocity_min = 210.98
+angular_velocity_max = 222.68
+angle_min = -720.0
+angle_max = 720.0
+scale_amount_min = 10.0
+scale_amount_max = 15.0
+color = Color(0, 0.5, 1, 1)
