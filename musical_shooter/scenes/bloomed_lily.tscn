@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b0whx8oinrwyb"]
+[gd_scene load_steps=11 format=3 uid="uid://b0whx8oinrwyb"]
 
 [ext_resource type="Texture2D" uid="uid://bvs2a2n6a0eu5" path="res://animations/lily_animation/lily_1.png" id="1_4rmig"]
 [ext_resource type="Script" path="res://scripts/blooming_lily_animation.gd" id="1_pvbb2"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dn15hckaeexj0" path="res://animations/lily_animation/lily_5.png" id="5_hy55e"]
 [ext_resource type="Texture2D" uid="uid://cl7wv2vx5v4rm" path="res://animations/lily_animation/lily_6.png" id="6_ra1d2"]
 [ext_resource type="AudioStream" uid="uid://dtur40ym50vyt" path="res://soundeffects/sparkly_sound.wav" id="8_e23xl"]
+[ext_resource type="Texture2D" uid="uid://b0dvj36olipwb" path="res://sprites/leaf.png" id="9_1hk4d"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s78lr"]
 animations = [{
@@ -45,3 +46,23 @@ stream = ExtResource("8_e23xl")
 sprite_frames = SubResource("SpriteFrames_s78lr")
 animation = &"lily_bloom"
 frame_progress = 0.96249
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+scale = Vector2(10.4, 9.6)
+emitting = false
+amount = 10
+lifetime = 0.4
+one_shot = true
+speed_scale = 0.58
+explosiveness = 1.0
+texture = ExtResource("9_1hk4d")
+emission_shape = 1
+emission_sphere_radius = 1.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 72.85
+initial_velocity_max = 76.49
+angle_min = -143.0
+angle_max = 133.5
+scale_amount_min = 0.3
+scale_amount_max = 0.5

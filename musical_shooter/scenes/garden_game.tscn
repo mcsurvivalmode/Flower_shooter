@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bg0f350au30km"]
+[gd_scene load_steps=22 format=3 uid="uid://bg0f350au30km"]
 
 [ext_resource type="Script" path="res://scripts/my shooter.gd" id="1_yv2sj"]
 [ext_resource type="Texture2D" uid="uid://rsk4rrn325d7" path="res://sprites/flower_backgorund.png" id="2_85snp"]
@@ -6,11 +6,21 @@
 [ext_resource type="PackedScene" uid="uid://crmi0dyeil037" path="res://scenes/player.tscn" id="2_uxrxa"]
 [ext_resource type="Script" path="res://scripts/flower_spawner.gd" id="3_cgi6h"]
 [ext_resource type="PackedScene" uid="uid://tc15etche3ta" path="res://scenes/bud_lily.tscn" id="4_1kca7"]
-[ext_resource type="Texture2D" uid="uid://vh3ut2jdvpxg" path="res://animations/SPLASHSCREEN1.png" id="4_jec0w"]
+[ext_resource type="Texture2D" uid="uid://datndpj86ul6b" path="res://animations/SPLASHSCREEN/SPLASHSCREEN1.png" id="4_4m2kt"]
 [ext_resource type="AudioStream" uid="uid://dlc4cxa2wpa8l" path="res://soundeffects/game sound.wav" id="5_aggvf"]
-[ext_resource type="Texture2D" uid="uid://b30fkkltcpldq" path="res://animations/SPLASHSCREEN2.png" id="5_cd0ok"]
+[ext_resource type="Texture2D" uid="uid://crrl87xvmh2he" path="res://animations/SPLASHSCREEN/SPLASHSCREEN2.png" id="5_dx870"]
 [ext_resource type="PackedScene" uid="uid://c6sb4e77exphc" path="res://scenes/bud_car.tscn" id="5_s7lhu"]
 [ext_resource type="PackedScene" uid="uid://c7emkxdi3torr" path="res://scenes/butter_fly.tscn" id="6_0acie"]
+
+[sub_resource type="Environment" id="Environment_t7sl6"]
+background_mode = 3
+background_color = Color(0.809907, 0.490318, 0.182086, 1)
+background_energy_multiplier = 1.6
+glow_enabled = true
+glow_intensity = 0.22
+glow_bloom = 1.0
+glow_hdr_threshold = 0.65
+fog_light_energy = 2.35
 
 [sub_resource type="LabelSettings" id="LabelSettings_7vctm"]
 font_size = 41
@@ -34,10 +44,10 @@ font_size = 76
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_jec0w")
+"texture": ExtResource("4_4m2kt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_cd0ok")
+"texture": ExtResource("5_dx870")
 }],
 "loop": true,
 "name": &"SPLASHSCREEN",
@@ -54,6 +64,9 @@ size = Vector2(20.9524, 23.5703)
 
 [node name="My shooter game" type="Node2D"]
 script = ExtResource("1_yv2sj")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_t7sl6")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -926.0

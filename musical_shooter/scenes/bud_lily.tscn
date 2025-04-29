@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://scripts/flower_scene.gd" id="1_bm7cm"]
 [ext_resource type="Texture2D" uid="uid://bvs2a2n6a0eu5" path="res://animations/lily_animation/lily_1.png" id="2_b16f8"]
-[ext_resource type="PackedScene" uid="uid://d23f536q1ahv6" path="res://leafs.tscn" id="2_emw4p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ks2la"]
 
@@ -10,13 +9,15 @@
 radius = 12.688
 height = 30.2147
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yceol"]
+load_path = "res://.godot/imported/leaf.png-ce8bc19db9bed79d0fee01aeb3e3fe82.ctex"
+
 [node name="lily_bud" type="CharacterBody2D" groups=["flower"]]
 position = Vector2(552, 296)
 scale = Vector2(-0.0475526, 0.0386096)
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("1_bm7cm")
-leaf_prefab = ExtResource("2_emw4p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, -1.5)
@@ -42,5 +43,24 @@ position = Vector2(9.53674e-07, 12.5)
 rotation = -0.46192
 scale = Vector2(5.32, -9)
 shape = SubResource("CapsuleShape2D_kojm2")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-21.0294, 0)
+scale = Vector2(-240.526, 70.4848)
+emitting = false
+amount = 50
+lifetime = 0.2
+one_shot = true
+speed_scale = 0.42
+explosiveness = 1.0
+texture = SubResource("CompressedTexture2D_yceol")
+emission_shape = 1
+emission_sphere_radius = 0.86
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 56.29
+initial_velocity_max = 122.52
+scale_amount_min = 0.02
+scale_amount_max = 0.02
 
 [connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]

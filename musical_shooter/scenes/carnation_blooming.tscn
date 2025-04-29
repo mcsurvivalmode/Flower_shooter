@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://qv7m1ebxhb15"]
+[gd_scene load_steps=11 format=3 uid="uid://qv7m1ebxhb15"]
 
 [ext_resource type="Script" path="res://scripts/carnation_blooming.gd" id="1_xkgfi"]
 [ext_resource type="Texture2D" uid="uid://cocxxpye6r5mh" path="res://animations/carnation_blooming/car_1.png" id="2_72rv0"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ri062yjkkmmb" path="res://animations/carnation_blooming/car_5.png" id="6_ovuv7"]
 [ext_resource type="Texture2D" uid="uid://cwmf841q1h7hh" path="res://animations/carnation_blooming/car_6.png" id="7_utvy2"]
 [ext_resource type="AudioStream" uid="uid://c6pa4o4467okf" path="res://soundeffects/carnation_bloom.wav" id="8_yxr6f"]
+[ext_resource type="Texture2D" uid="uid://b0dvj36olipwb" path="res://sprites/leaf.png" id="9_4pc8b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m16jp"]
 animations = [{
@@ -48,3 +49,23 @@ frame_progress = 1.0
 stream = ExtResource("8_yxr6f")
 volume_db = -6.504
 pitch_scale = 1.02
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+scale = Vector2(7.04, 5.52)
+emitting = false
+amount = 10
+lifetime = 0.4
+one_shot = true
+speed_scale = 0.75
+explosiveness = 1.0
+texture = ExtResource("9_4pc8b")
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 70.0
+initial_velocity_max = 70.0
+angle_min = -234.5
+angle_max = 172.0
+scale_amount_min = 0.3
+scale_amount_max = 0.5
