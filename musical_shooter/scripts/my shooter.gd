@@ -26,8 +26,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_button_pressed() -> void:
 	#next_level()
 	$CanvasLayer/Button.hide()
-	next_level()
-	
+
 	
 	
 	
@@ -35,10 +34,9 @@ func _on_button_pressed() -> void:
 func _process(delta):
 	$CanvasLayer/bloomed_flowers.text="Flowers Bloomed: " + str(flower_count)
 	$CanvasLayer/score.text="Score: " + str(score)
-	# if the dude reaches the target, advance to next level
 
 	
-	if level >= 2 and flower_count == target:
+	if flower_count == target:
 		
 		
 		level = level + 1
@@ -47,13 +45,7 @@ func _process(delta):
 		final_level()
 		#set_process(false)
 		
-			
-	elif flower_count == target:
-		print("next level")
-		level = level + 1
-		%Level.text="level: " + str(level)
-		next_level()
-		
+
 	
 		
 func next_level():
@@ -69,7 +61,7 @@ func next_level():
 	flower_spawner_2.rate  = 300
 	#flower_spawner.position 
 	flower_spawner_2.spawn()	
-	target = target + flower_spawner.count + flower_spawner_2.count - 2
+	target = target + flower_spawner_2.count 
 	
 
 

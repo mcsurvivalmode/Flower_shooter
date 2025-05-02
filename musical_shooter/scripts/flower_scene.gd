@@ -16,8 +16,8 @@ func movement():
 	#tween.tween_property(self, "rotation", PI, 4)
 	tween.tween_property(self, "position", position + Vector2.LEFT * 700, 5)
 	tween.tween_property(self, "position", position + Vector2.RIGHT * 700, 5)
-	#tween.tween_property(self, "position", position + Vector2.UP * 400, 5)
-	#tween.tween_property(self, "position", position + Vector2.DOWN * 400, 5)
+	tween.tween_property(self, "position", position + Vector2.UP * 400, 5)
+	tween.tween_property(self, "position", position + Vector2.DOWN * 400, 5)
 	tween.finished.connect(movement)
 		
 	pass
@@ -49,7 +49,7 @@ func randomise_timer():
 
 func _on_hitbox_area_entered(area: Area2D) -> void: #plays animation when flower bud is hit 
 	print("HITHITHIT")
-	scene.score+= 1 
+	scene.score += 1 
 	scene.flower_count += 1 
 	$CPUParticles2D.emitting = true 
 	

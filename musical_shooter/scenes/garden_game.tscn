@@ -15,9 +15,11 @@
 [sub_resource type="Environment" id="Environment_t7sl6"]
 background_mode = 3
 background_color = Color(0.809907, 0.490318, 0.182086, 1)
-background_energy_multiplier = 1.6
+background_energy_multiplier = 2.05
+ambient_light_color = Color(0.805389, 0.702544, 0.577288, 1)
+tonemap_exposure = 0.0
 glow_enabled = true
-glow_intensity = 0.22
+glow_intensity = 0.39
 glow_bloom = 1.0
 glow_hdr_threshold = 0.65
 fog_light_energy = 2.35
@@ -139,7 +141,7 @@ text = "60"
 label_settings = SubResource("LabelSettings_7fdpx")
 
 [node name="Timer" type="Timer" parent="CanvasLayer/Control"]
-wait_time = 60.0
+wait_time = 30.0
 
 [node name="Button" type="Button" parent="CanvasLayer"]
 offset_left = -33.0
