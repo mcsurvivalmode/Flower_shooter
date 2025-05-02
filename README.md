@@ -14,6 +14,12 @@ Press space to shoot
 Video- 
 https://youtu.be/2VyTuLC5178
 
+Screenshots- 
+![Screenshot 2025-05-02 174448](https://github.com/user-attachments/assets/8add68a9-6e7c-47d2-859f-1d791232679a)
+![Screenshot 2025-05-02 174448](https://github.com/user-attachments/assets/c461e446-2d57-4926-9508-15469a615c2d)
+![Screenshot 2025-05-02 174521](https://github.com/user-attachments/assets/1c1006a2-2685-4b1b-ae72-949adea4194d)
+
+
 References- 
 1. https://github.com/skooter500/GP-2024/tree/main/the-course
 2. https://www.youtube.com/watch?v=Zf6awHRr7bU
@@ -54,8 +60,23 @@ I also feel like i have a better understanding of if statements.
 I learned how to use the particle systems in godot, i struggled at first to get them working, but once i did it was pretty straight forward. 
 
 
-Mechanics
-You use the arrow keys to move the hose around 
+Mechanics-
+You use the arrow keys to move the hose around. The movement is unique as it isnt just left and right movement, the player can also move un and down the screen aswell. This is different to normal spaceshooter type games as i wanted the player to be able to get closer to the flowers and have them grow where they want. 
+
+There is a score and a flower counter letting the players know how many points theyve got and how many flowers theyve grown, but on the end screen these are not mentioned. The only text is 'this garden is beautiful, well done!' this is because the game is about growing pretty flowers, not score. The player should play for the flowers and not the points, like other violent shooters. 
+
+Enemies- 
+The 'enemies' are two different kinds of flower buds, lilys and carnations, when hit, they spawn in an animation of the flower blooming. This animation was hand drawn by me. 
+The enemies movement is created using tweens. The lily buds move left and right across the screen, where as the carnations also move up and down to make them more difficult to catch. 
+The lilys are worth 1 point and the carnations are worth 2.
+
+The butterflys, which the player should not shoot, fly across the screen at the start of each level. When hit the butterflys play an animation and then despawn. If hit they take 5 points away from the player.
+
+
+
+
+
+
 
 
 
