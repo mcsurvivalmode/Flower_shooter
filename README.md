@@ -72,10 +72,16 @@ The lilys are worth 1 point and the carnations are worth 2.
 
 The butterflys, which the player should not shoot, fly across the screen at the start of each level. When hit the butterflys play an animation and then despawn. If hit they take 5 points away from the player.
 
+Photos- 
 
-
-
-
+![IMG_8628](https://github.com/user-attachments/assets/8b18f60b-bf2f-41d2-a9b2-5ce78280c070)
+![IMG_8364](https://github.com/user-attachments/assets/699d55e5-74d4-4903-9876-d793b551e836)
+![fly_4](https://github.com/user-attachments/assets/27cca1e4-e8b6-458b-9bc5-1ef03f344d30)
+![car_4](https://github.com/user-attachments/assets/7ed0f1a5-0c9e-4507-a8da-2f357936cc18)
+![car_6](https://github.com/user-attachments/assets/8acf3ddc-0eb6-4953-baa6-38cccc2dbfca)
+![flower_backgorund](https://github.com/user-attachments/assets/f64cae44-c25f-4c07-9016-fc971a34b582)
+![leaf](https://github.com/user-attachments/assets/40dd94b3-ab91-4584-b762-ae3797f4336c)
+![well done](https://github.com/user-attachments/assets/4af78732-32db-4d78-adf4-972a26c73216)
 
 
 
