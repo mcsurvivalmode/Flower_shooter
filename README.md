@@ -16,7 +16,6 @@ https://youtu.be/2VyTuLC5178
 
 Screenshots- 
 ![Screenshot 2025-05-02 174448](https://github.com/user-attachments/assets/8add68a9-6e7c-47d2-859f-1d791232679a)
-![Screenshot 2025-05-02 174448](https://github.com/user-attachments/assets/c461e446-2d57-4926-9508-15469a615c2d)
 ![Screenshot 2025-05-02 174521](https://github.com/user-attachments/assets/1c1006a2-2685-4b1b-ae72-949adea4194d)
 
 
