@@ -1,14 +1,17 @@
 Faye Walsh, 24385051, TU984
 
-Project Title- Green Trigger Video-
+Project Title- 
+Garden Grow!
 
-Screenshots-
 
-Description of the Project- Shoot the flower buds around the garden to help them bloom! the more you shoot, more will spwan. Play till your garden is full
+Description of the Project- 
+Water the flower buds in your garden before the timer runs out. Avoid the butterflys as they are helping your flowers grow! Hit one and you might lose points
 
 Instructions for Use-
+use the arrows keys to move the hose around the screen. 
+Press space to shoot 
 
-List of Classes/Assets in the Project Class/Asset Source Player.gd Self-written
+List of Classes/Assets in the Project
 
 References Item 1 Item 2
 
@@ -17,3 +20,5 @@ What I Am Most Proud of in the Assignment-
 What I Learned-
 
 Game Design Document
+
+
