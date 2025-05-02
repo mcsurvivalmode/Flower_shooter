@@ -21,5 +21,3 @@ What I Learned-
 
 Game Design Document
 
-
-![princess_raw](https://github.com/user-attachments/assets/eb46c5a8-0f59-4aa2-871a-9b32d584104b)
