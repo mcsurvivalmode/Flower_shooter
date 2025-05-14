@@ -4,7 +4,6 @@ extends CharacterBody2D
 @export var auto_spawn = false
 @onready var scene = $".."
 
-
 var lily_bloom_prefab = preload("res://scenes/bloomed_lily.tscn")
 
 
